@@ -1,0 +1,38 @@
+{
+  "name": "namaste-react-code",
+  "version": "1.0.0",
+  "description": "React codes of namaste react ",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest ",
+    "tailwind:init": "tailwindcss init",
+    "dev": "tailwindcss -i ./index.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParitoshSahu2/namaste--react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParitoshSahu2/namaste--react/issues"
+  },
+  "homepage": "https://github.com/ParitoshSahu2/namaste--react#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "postcss": "^8.5.3",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.6"
+  },
+  "dependencies": {
+    "dom": "^0.0.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.22.3",
+    "router": "^2.2.0"
+  },
+  "broweserslists": [
+    "last 2 versions"
+  ]
+}
