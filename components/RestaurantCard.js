@@ -12,17 +12,31 @@ const RestaurantCard=(props)=>{
       } = resData;
     
     return(
-        <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
-            <img className="rounded-lg"
-             alt="res-logo"
+        <div>
+            <img 
              src={CDN_URL+
                     cloudinaryImageId}/>
-            <h3 className="font-bold py-4 text-lg">{name}</h3>
+            <h3>{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
             <h4>{avgRating} STARS</h4>
             <h4>{costForTwo}</h4>
             <h4>{sla.slaString}</h4>
         </div>
     );
-};
+}
+
+    //high order component
+export const withPromtedLabel=(RestaurantCard)=>{
+    return(prop)=>{
+        return(
+            <div>
+                <label>
+                    Promoted
+                </label>
+                <RestaurantCard{...props}/>
+            </div>
+        )
+    }
+}
+
 export default RestaurantCard;

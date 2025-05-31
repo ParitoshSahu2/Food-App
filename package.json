@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React codes of namaste react ",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "cross-env TEMP=./.parcel_temp TMP=./.parcel_temp parcel index.html",
     "test": "jest ",
     "tailwind:init": "tailwindcss init",
     "dev": "tailwindcss -i ./index.css -o ./dist/output.css --watch"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ParitoshSahu2/namaste--react#readme",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "parcel": "^2.8.3",
     "postcss": "^8.5.3",
     "process": "^0.11.10",

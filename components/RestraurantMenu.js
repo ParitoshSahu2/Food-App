@@ -20,7 +20,7 @@ if(resInfo===null || resInfo === undefined)
 
 
     return(
-        <div className="menu">
+        <div >
             <h1>{name}</h1>
             <p>{cuisines.join(", ")}-{costForTwoMessage}</p>
             <h2>Menu</h2>

@@ -9,36 +9,35 @@ const Header=()=>{
     const onlineStatus=useOnlineStatus();
     
     return (
-          <div className="header ">
-         <div className="flex justify-between items-center">
-         <img
-            className="bg-red-500 w-12 rounded-full"    
-            src={LOGO_URL}/>               
+          <div className="flex justify-between" >
+         <div>
+         <img  className="w-56"
+             src={LOGO_URL}/>               
          </div>
         
 
-         <div className="hidden sm:flex items-center space-x-6 text-gray-800 font-medium">
-            <ul className="nav-items">
-                <li className="px-4">
-                    online Status:{onlineStatus?"online":"offline"}
+         <div>
+            <ul className="flex p-4 m-4">
+                <li>
+                    online Status:{onlineStatus?"🟢":"🔴"}
                 </li>
-                <li className="hover:text-blue-700 px-4 ">
+                <li>
                     <Link to="/">HOME</Link>
                 </li>
-                <li  className="hover:text-blue-700 px-4 ">
+                <li>
                     <Link to="/about">About Us</Link>
                 </li>
-                <li  className="hover:text-blue-700 px-4 ">
+                <li>
                     <Link to="/contact">Contact Us</Link>
                 </li>
-                <li  className="hover:text-blue-700 px-4 ">
+                <li>
                     <Link to="/">Cart</Link>
                 </li>
-                <li  className="hover:text-blue-700 px-4 ">
+                <li>
                     <Link to="/Grocery">Grocery</Link>
                 </li>
                 <button 
-                className="Login"
+                
                 onClick={()=>{
                     btnName==="Login"
                      ?setBtnName("Logout")
