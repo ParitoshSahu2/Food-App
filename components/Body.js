@@ -57,18 +57,16 @@ return<Shimmer/>;
   return (
     <div>
       <div className="flex">
-      <div>
+      <div className=" search btn m-4 p-4">
         <input 
         type="text"
-
+        className="border border-solid border-black m-2"
         value={searchText}
         onChange={(e)=>{
           setSearchText(e.target.value);
         }}
         />
-        <button className="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-md
-               focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
-               transition duration-300 ease-in-out"
+        <button className="px-4 py-1 bg-green-100 m-4 rounded-lg"
         onClick={()=>{
           //filter the restraunt cards and update the UI
           //searchText
@@ -77,24 +75,23 @@ return<Shimmer/>;
          setFilteredRestaurant(filteredRestaurant)
         }}
         >
-          
           Search
         </button>
         </div>
-        <button className="bg-green-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center space-x-2
-               focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-
-          onClick={() => {
-              const filteredList = listOfRestaurants.filter(
-              (res) => res.avgRating > 4
-            );
-            setListOfRestaurants(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div className="filter btn m-4 px-4 flex items-center rounded-lg">
+           <button className="px-4 py-2 bg-gray-100"
+            onClick={() => {
+                const filteredList = listOfRestaurants.filter(
+                (res) => res.avgRating > 4
+              );
+              setListOfRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
-      <div >
+      <div className="flex flex-wrap">
        {filteredRestaurant.map((restaurant, index) => (
        restaurant ? (
         <Link 
