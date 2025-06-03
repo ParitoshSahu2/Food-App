@@ -25,14 +25,14 @@ const RestaurantCard=(props)=>{
     );
 }
 
-    //high order component
+    //high order component- normal function which takes a compo as a argument then enchases it and retrun it 
 export const withPromtedLabel=(RestaurantCard)=>{
-    return(prop)=>{
+    return(props)=>{
         return(
             <div>
-                <label>
+                <label className="absolute bg-black text-white m-1 p-1 rounded-lg">
                     Promoted
-                </label>
+                </label> 
                 <RestaurantCard{...props}/>
             </div>
         )
